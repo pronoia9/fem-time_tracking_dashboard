@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react';
 import './Time.scss';
-const icon = require('../assets/images/icon-ellipsis.svg');
-const exercise = require('../assets/images/icon-exercise.svg');
-const play = require('../assets/images/icon-play.svg');
-const selfcare = require('../assets/images/icon-self-care.svg');
-const social = require('../assets/images/icon-social.svg');
-const study = require('../assets/images/icon-study.svg');
-const work = require('../assets/images/icon-work.svg');
 
 export default function Time({ data, state }) {
   const [times, setTimes] = useState({ current: 0, previous: 0 });
@@ -25,7 +18,7 @@ export default function Time({ data, state }) {
       <div className='dashboard__footer bg-dark_blue'>
         <div className='dashboard__footer--nav'>
           <p>{title}</p>
-          <img src={icon.default} alt='ellipsis' width='21' height='5' />
+          <img src={require('../assets/images/icon-ellipsis.svg').default} alt='ellipsis' width='21' height='5' />
         </div>
         <div className='dashboard__footer--foot'>
           <h1 className='current__time fw-400'>{times.current}hrs</h1>
