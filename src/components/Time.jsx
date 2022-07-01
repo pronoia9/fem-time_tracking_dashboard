@@ -18,7 +18,7 @@ export default function Time({ data, state }) {
   }, [state, timeframes]);
 
   return (
-    <section className='work dashboard__widget text-white'>
+    <section className='work dashboard__widget tc-white'>
       <div className={`dashboard__header bg-${title2}`}>
         <img src={require(`../assets/images/icon-${title2}.svg`)} alt={`${title} icon`} className='icon-image' />
       </div>
