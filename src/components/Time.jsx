@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import './Time.scss';
 const icon = require('../assets/images/icon-ellipsis.svg');
 const exercise = require('../assets/images/icon-exercise.svg');
@@ -7,25 +8,36 @@ const social = require('../assets/images/icon-social.svg');
 const study = require('../assets/images/icon-study.svg');
 const work = require('../assets/images/icon-work.svg');
 
-export default function Time({ data }) {
+export default function Time({ data, state }) {
+  const [times, setTimes] = useState({ current: 0, previous: 0 });
   const { title, timeframes } = data;
-  const { daily, weekly, monthly } = timeframes;
+
+  useEffect(() => {
+    setTimes(getTimes(state, timeframes));
+  }, [state, timeframes]);
 
   return (
-    <section class='work dashboard__widget text-white'>
-      <div class='dashboard__header bg-100'>
-        <img src='./images/icon-work.svg' alt='work icon' class='icon-image' />
+    <section className='work dashboard__widget text-white'>
+      <div className='dashboard__header bg-100'>
+        <img src='./images/icon-work.svg' alt='work icon' className='icon-image' />
       </div>
-      <div class='dashboard__footer bg-neutral-400'>
-        <div class='dashboard__footer--nav'>
+      <div className='dashboard__footer bg-neutral-400'>
+        <div className='dashboard__footer--nav'>
           <p>{title}</p>
           <img src={icon.default} alt='ellipsis' width='21' height='5' />
         </div>
-        <div class='dashboard__footer--foot'>
-          <h1 class='current__time fw-400'>5hrs</h1>
-          <p class='text-pale-blue fw-300 previous__time'>Previous - 7hrs</p>
+        <div className='dashboard__footer--foot'>
+          <h1 className='current__time fw-400'>{times.current}hrs</h1>
+          <p className='text-pale-blue fw-300 previous__time'>Previous - {times.previous}hrs</p>
         </div>
       </div>
     </section>
   );
 }
+
+const getTimes = (state, timeframes) => {
+  if (state === 'Daily') return { current: timeframes.daily.current, previous: timeframes.daily.previous };
+  else if (state === 'Weekly') return { current: timeframes.weekly.current, previous: timeframes.weekly.previous };
+  else if (state === 'Monthly') return { current: timeframes.monthly.current, previous: timeframes.monthly.previous };
+  else return [0, 0];
+};
