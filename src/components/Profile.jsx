@@ -1,8 +1,9 @@
 import './Profile.scss';
 const url = require('../assets/images/image-jeremy.png');
 
-export default function Profile({ user }) {
+export default function Profile({ user, state, changeTime }) {
   const { name } = user;
+  const times = [{ time: 'Daily' }, { time: 'Weekly' }, { time: 'Monthly' }];
 
   return (
     <section className='dashboard__widget dashboard__profile bg-dark_blue'>
@@ -14,11 +15,11 @@ export default function Profile({ user }) {
         </div>
       </div>
       <div className='profile__footer text-desaturated-blue'>
-        <p className='active' id='daily'>
-          Daily
-        </p>
-        <p id='weekly'>Weekly</p>
-        <p id='monthly'>Monthly</p>
+        {times.map((t) => (
+          <p key={t.time} className={state === t.time ? 'active' : ''} onClick={() => changeTime(t.time)}>
+            {t.time}
+          </p>
+        ))}
       </div>
     </section>
   );
