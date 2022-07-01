@@ -175,43 +175,7 @@ h1, h2 {
 
 
 
-.dashboard__profile {
-  .profile__header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 2.25rem;
-    border-radius: 1rem;
-  }
 
-  .profile-image {
-    width: 4rem;
-    border-radius: 50%;
-    border: 4px solid #fff;
-  }
-
-  .profile__info p {
-    font-size: var(--fs-15);
-  }
-
-  .profile__footer p:hover {
-    cursor: pointer;
-    color: #fafafa;
-  }
-
-  .profile__info h2 {
-    font-size: var(--fs-24);
-  }
-
-  .profile__footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1.25rem;
-  }
-}
 
 .dashboard__widget {
   .dashboard__header {
