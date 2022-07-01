@@ -1,14 +1,13 @@
 import './App.scss';
-import Profile from './Profile';
-import Time from './Time';
+import Widget from './Widget';
 const data = require('../assets/data.json');
 
 function App() {
   console.log(data);
   return (
     <div className='grid-container'>
-      <Profile />
-      { data.map((obj) => (<Time key={obj.title} />)) }
+      <Widget />
+      { data.map((obj) => (<Widget key={obj.title} />)) }
     </div>
   );
 }
