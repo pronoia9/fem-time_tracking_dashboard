@@ -11,6 +11,7 @@ const work = require('../assets/images/icon-work.svg');
 export default function Time({ data, state }) {
   const [times, setTimes] = useState({ current: 0, previous: 0 });
   const { title, timeframes } = data;
+  const title2 = title.toLowerCase().replace(' ', '-');
 
   useEffect(() => {
     setTimes(getTimes(state, timeframes));
@@ -18,10 +19,10 @@ export default function Time({ data, state }) {
 
   return (
     <section className='work dashboard__widget text-white'>
-      <div className={`dashboard__header bg-${title.toLowerCase().replace(' ', '')}`}>
-        <img src='./images/icon-work.svg' alt='work icon' className='icon-image' />
+      <div className={`dashboard__header bg-${title2}`}>
+        <img src={require(`../assets/images/icon-${title2}.svg`)} alt={`${title} icon`} className='icon-image' />
       </div>
-      <div className='dashboard__footer bg-neutral-400'>
+      <div className='dashboard__footer bg-dark_blue'>
         <div className='dashboard__footer--nav'>
           <p>{title}</p>
           <img src={icon.default} alt='ellipsis' width='21' height='5' />
