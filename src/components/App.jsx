@@ -11,7 +11,7 @@ function App() {
   return (
     <div className='grid-container'>
       <Widget state={state} changeTime={changeTime} />
-      { data.map((obj) => (<Widget key={obj.title} data={obj} />)) }
+      { data.map((obj) => (<Widget key={obj.title} data={obj} state={state} />)) }
     </div>
   );
 }
