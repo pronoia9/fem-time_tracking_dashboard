@@ -29,7 +29,7 @@ export default function Time({ data, state }) {
         </div>
         <div className='dashboard__footer--foot'>
           <h1 className='current__time fw-400'>{times.current}hrs</h1>
-          <p className='text-pale-blue fw-300 previous__time'>Previous - {times.previous}hrs</p>
+          <p className='tc-pale-blue fw-300 previous__time'>Previous - {times.previous}hrs</p>
         </div>
       </div>
     </section>
