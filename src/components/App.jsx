@@ -7,9 +7,8 @@ function App() {
   console.log(data);
   return (
     <div className='grid-container'>
-      {data.map((obj) => (
-        <Time key={obj.title} />
-      ))}
+      <Profile />
+      { data.map((obj) => (<Time key={obj.title} />)) }
     </div>
   );
 }
