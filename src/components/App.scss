@@ -7,3 +7,15 @@
   grid-template-areas: 'profile' 'work' 'play' 'study' 'exercise' 'social' 'self-care';
   gap: 2rem;
 }
+
+@media only screen and (min-width: 48em) {
+  .grid-container {
+    grid-template-areas: 'profile profile' 'work play' 'study exercise' 'social self-care';
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .grid-container {
+    grid-template-areas: 'profile work play study' 'profile exercise social self-care';
+  }
+}
