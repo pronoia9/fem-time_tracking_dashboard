@@ -1,9 +1,12 @@
+import { useState, useEffect } from 'react';
 import './App.scss';
 import Widget from './Widget';
 const data = require('../assets/data.json');
 
 function App() {
-  console.log(data);
+  const [state, setState] = useState();
+  useEffect(() => { setState('Daily') }, []);
+  
   return (
     <div className='grid-container'>
       <Widget />
