@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className='grid-container'>
-      <Widget changeTime={changeTime} />
+      <Widget state={state} changeTime={changeTime} />
       { data.map((obj) => (<Widget key={obj.title} data={obj} />)) }
     </div>
   );
