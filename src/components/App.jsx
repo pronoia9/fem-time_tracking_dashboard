@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='grid-container'>
       <Widget />
-      { data.map((obj) => (<Widget key={obj.title} />)) }
+      { data.map((obj) => (<Widget key={obj.title} data={obj} />)) }
     </div>
   );
 }
