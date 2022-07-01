@@ -131,31 +131,31 @@ h2 {
 
 // BACKGROUNDS
 
-.bg-700, .bg-primary {
+.bg-primary {
   background: var(--primary);
 }
 
-.bg-100, .bg-work {
+.bg-work {
   background: var(--primary-work);
 }
 
-.bg-200, .bg-play {
+.bg-play {
   background: var(--primary-play);
 }
 
-.bg-300, .bg-study {
+.bg-study {
   background: var(--primary-study);
 }
 
-.bg-400, .bg-exercise {
+.bg-exercise {
   background: var(--primary-exercise);
 }
 
-.bg-500, .bg-social {
+.bg-social {
   background: var(--primary-social);
 }
 
-.bg-600, .bg-selfcare {
+.bg-self-care {
   background: var(--primary-self_care);
 }
 
@@ -163,7 +163,7 @@ h2 {
   background: var(--neutral-very_dark_blue);
 }
 
-.bg-neutral-400, .bg-dark_blue {
+.bg-dark_blue {
   background: var(--neutral-dark_blue);
 }
 
@@ -177,15 +177,15 @@ h2 {
 
 // TEXT-COLOR
 
-.text-white, .active {
+.tc-white, .active {
   color: #fff;
 }
 
-.text-desaturated-blue {
+.tc-desaturated-blue {
   color: var(--neutral-desaturated_blue);
 }
 
-.text-pale-blue {
+.tc-pale-blue {
   color: var(--neutral-pale_blue);
 }
 
