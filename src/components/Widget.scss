@@ -2,3 +2,172 @@
   border-radius: 1rem;
   overflow: hidden;
 }
+
+.dashboard__profile {
+  .profile__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 2.25rem;
+    border-radius: 1rem;
+  }
+
+  .profile-image {
+    width: 4rem;
+    border-radius: 50%;
+    border: 4px solid #fff;
+  }
+
+  .profile__info p {
+    font-size: var(--fs-15);
+  }
+
+  .profile__footer p:hover {
+    cursor: pointer;
+    color: #fafafa;
+  }
+
+  .profile__info h2 {
+    font-size: var(--fs-24);
+  }
+
+  .profile__footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.25rem;
+  }
+}
+
+.dashboard__widget {
+  .dashboard__header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 4.5rem;
+  }
+
+  .icon-image {
+    margin-top: -1.25rem;
+    margin-right: 1rem;
+    width: 4.875rem;
+  }
+}
+
+.dashboard__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  margin-top: -2rem;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--neutral-desaturated_blue);
+  }
+
+  .dashboard__footer--nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dashboard__footer--foot {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: var(--fs-32);
+    }
+  }
+}
+
+/* Grid Areas */
+
+.dashboard__widget {
+  &:nth-child(1) {
+    grid-area: profile;
+  }
+
+  &:nth-child(2) {
+    grid-area: work;
+  }
+
+  &:nth-child(3) {
+    grid-area: play;
+  }
+
+  &:nth-child(4) {
+    grid-area: study;
+  }
+
+  &:nth-child(5) {
+    grid-area: exercise;
+  }
+
+  &:nth-child(6) {
+    grid-area: social;
+  }
+
+  &:nth-child(7) {
+    grid-area: self-care;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .grid-container {
+    grid-template-areas: 'profile profile' 'work play' 'study exercise' 'social self-care';
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .grid-container {
+    grid-template-areas: 'profile work play study' 'profile exercise social self-care';
+  }
+
+  .dashboard__profile {
+    .profile__header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2.25rem 2.25rem 5rem 2.25rem;
+      gap: 2.5rem;
+    }
+
+    .profile__info h2 {
+      font-size: var(--fs-40);
+      line-height: 1;
+    }
+
+    .profile__footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 2.25rem;
+    }
+  }
+
+  .dashboard__footer {
+    padding: 1.75rem;
+
+    .dashboard__footer--foot {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      h1 {
+        font-size: var(--fs-56);
+      }
+    }
+  }
+}
