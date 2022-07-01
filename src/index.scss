@@ -172,17 +172,6 @@ h1, h2 {
   color: #fff;
 }
 
-.grid-container {
-  display: grid;
-  grid-auto-columns: 1fr;
-  width: min(87%, 70rem);
-  padding-block: 2rem;
-
-  margin-inline: auto;
-
-  grid-template-areas: 'profile' 'work' 'play' 'study' 'exercise' 'social' 'self-care';
-  gap: 2rem;
-}
 
 .dashboard__widget {
   border-radius: 1rem;
