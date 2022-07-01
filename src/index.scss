@@ -167,29 +167,17 @@ h2 {
   background: var(--neutral-dark_blue);
 }
 
-.bg-desaturated_blue {
+.bg-desaturated_blue, .tc-desaturated-blue {
   background: var(--neutral-desaturated_blue);
 }
 
-.bg-pale_blue {
+.bg-pale_blue, .tc-pale-blue {
   background: var(--neutral-pale_blue);
 }
-
-// TEXT-COLOR
 
 .tc-white, .active {
   color: #fff;
 }
-
-.tc-desaturated-blue {
-  color: var(--neutral-desaturated_blue);
-}
-
-.tc-pale-blue {
-  color: var(--neutral-pale_blue);
-}
-
-// FONT-WEIGHT
 
 .fw-300 {
   font-weight: var(--font_weight-300);
