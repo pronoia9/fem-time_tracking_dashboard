@@ -18,7 +18,7 @@ export default function Time({ data, state }) {
 
   return (
     <section className='work dashboard__widget text-white'>
-      <div className='dashboard__header bg-100'>
+      <div className={`dashboard__header bg-${title.toLowerCase().replace(' ', '')}`}>
         <img src='./images/icon-work.svg' alt='work icon' className='icon-image' />
       </div>
       <div className='dashboard__footer bg-neutral-400'>
