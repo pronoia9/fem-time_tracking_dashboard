@@ -10,11 +10,11 @@ export default function Profile({ user, state, changeTime }) {
       <div className='profile__header bg-primary'>
         <img src={url} alt='profile pic' className='profile-image' />
         <div className='profile__info'>
-          <p className='text-pale-blue'>Reports for</p>
+          <p className='tc-pale-blue'>Reports for</p>
           <h2>{name}</h2>
         </div>
       </div>
-      <div className='profile__footer text-desaturated-blue'>
+      <div className='profile__footer tc-desaturated-blue'>
         {times.map((t) => (
           <p key={t.time} className={state === t.time ? 'active' : ''} onClick={() => changeTime(t.time)}>
             {t.time}
