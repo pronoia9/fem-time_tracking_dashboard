@@ -1,7 +1,17 @@
 import './App.scss';
+import Profile from './Profile';
+import Time from './Time';
+const data = require('../assets/data.json');
 
 function App() {
-  return <div className='grid-container'></div>;
+  console.log(data);
+  return (
+    <div className='grid-container'>
+      {data.map((obj) => (
+        <Time key={obj.title} />
+      ))}
+    </div>
+  );
 }
 
 export default App;
