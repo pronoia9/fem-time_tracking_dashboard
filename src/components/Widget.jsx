@@ -6,6 +6,6 @@ export default function Widget({ data, state, changeTime }) {
   return data ? (
     <Time data={data} state={state} />
   ) : (
-    <Profile state={state} changeTime={changeTime} user={{ name: 'Jeremy Robson', image: '../assets/images/image-jeremy.png' }} />
+    <Profile state={state} changeTime={changeTime} user={{ name: 'Jeremy Robson', image: 'image-jeremy.png' }} />
   );
 }
