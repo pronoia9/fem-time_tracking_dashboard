@@ -1,7 +1,7 @@
 import './App.scss';
 
 function App() {
-  return <div className='App'></div>;
+  return <div className='grid-container'></div>;
 }
 
 export default App;
